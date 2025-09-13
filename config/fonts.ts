@@ -1,11 +1,17 @@
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
+// fonts.ts
+import { Lexend, Montserrat, DM_Sans } from "next/font/google";
 
-export const fontSans = FontSans({
+export const bodyFont = Lexend({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-body",
 });
 
-export const fontMono = FontMono({
+export const headingFont = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
+
+export const monoFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-mono",
 });

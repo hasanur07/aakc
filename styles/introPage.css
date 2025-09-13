@@ -1,0 +1,112 @@
+.intro h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.intro p{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.intro .preloader, .split-overlay, .tags-overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100svh;
+}
+
+.intro .preloader, .split-overlay{
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.intro .preloader, .tags-overlay{
+    z-index: 2;
+}
+
+.intro .split-overlay{
+    z-index: 1;
+}
+
+.intro .intro-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.intro .outro-title{
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 10rem);
+    transform: translate(-50%, -50%);
+}
+
+.intro .intro-title .char span{
+    display: inline-block;
+    transform: translateY(-100%);
+}
+
+.intro .intro-title .char{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.intro .outro-title .char{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.intro .outro-title .char span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.intro .tag{
+    position: absolute;
+    width: max-content;
+    color: #5a5a5a;
+    overflow: hidden;
+}
+
+.intro .tag p .word{
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.intro .tag-1{
+    top: 15%;
+    left: 15%;
+}
+
+.intro .tag-2{
+    bottom: 15%;
+    left: 25%;
+}
+
+.intro .tag-3{
+    bottom: 30%;
+    right: 15%;
+}
+
+@media (max-width: 1000px) {
+    .intro h1{
+        font-size: 2.5rem;
+    }
+    .intro .outro-title{
+        left: calc(50% + 4rem);
+    }
+}
+
+@media (max-width: 680px) {
+    .intro h1{
+        font-size: 1.5rem;
+    }
+    .intro .outro-title{
+        left: calc(50% + 2rem);
+    }
+}

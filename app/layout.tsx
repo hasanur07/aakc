@@ -6,8 +6,9 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { bodyFont, headingFont, monoFont } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import IntroPage from "@/components/intro/introPage";
 
 export const metadata: Metadata = {
   title: {
@@ -33,31 +34,62 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="en" className="overflow-hidden bg-[#F9FAFB] dark:bg-[#111827] text-[#111827] dark:text-[#F9FAFB]">
       <head />
       <body
         className={clsx(
-          "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable,
+          "min-h-screen font-body antialiased overflow-hidden",
+          bodyFont.variable,
+          headingFont.variable,
+          monoFont.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <IntroPage />
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="container mx-auto max-w-7xl flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
+            <footer className="flex flex-col border-t border-black max-w-7xl mx-auto w-full px-6 mt-12">
+              <div className="py-4">
+                <h1>AL AMEEN KNOWLEDGE CITY</h1>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold">Contact Us</h2>
+                  <p>123 Knowledge St.</p>
+                  <p>City, State, ZIP</p>
+                  <p>Email: info@aakcedu.com</p>
+                  <p>Phone: (123) 456-7890</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold">Quick Links</h2>
+                  <Link href="#" className="text-current">About Us</Link>
+                  <Link href="#" className="text-current">Admissions</Link>
+                  <Link href="#" className="text-current">Programs</Link>
+                  <Link href="#" className="text-current">Contact</Link>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h2 className="font-semibold">Follow Us</h2>
+                  <Link href="#" className="text-current">Facebook</Link>
+                  <Link href="#" className="text-current">Twitter</Link>
+                  <Link href="#" className="text-current">Instagram</Link>
+                  <Link href="#" className="text-current">LinkedIn</Link>
+                </div>
+              </div>
+            </footer>
+            <div className="w-full flex items-center justify-between py-3 mt-6 border-t border-black max-w-7xl mx-auto px-6 md:px-0">
+              <span className="text-default-600">Made with 💕</span>
               <Link
                 isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://heroui.com?utm_source=next-app-template"
-                title="heroui.com homepage"
+                color="foreground"
+                href="https://hasanur.doclet.app?utm_source=aakc"
+                title="hasanur.12 portfolio"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">HeroUI</p>
+                <p>by hasanur.io</p>
               </Link>
-            </footer>
+            </div>
           </div>
         </Providers>
       </body>
