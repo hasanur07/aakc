@@ -32,7 +32,7 @@ export default function IntroPage() {
             scale: 0.75,
         })
         gsap.set(".split-overlay .outro-title .char", {
-            x: isMobile ? "-3rem" : "-8rem",
+            x: isMobile ? "-1rem" : "-8rem",
             fontSize: isMobile ? "6rem" : "14rem",
             fontWeight: "500",
         })
@@ -70,18 +70,18 @@ export default function IntroPage() {
                 duration: 1,
             }, 3.5)
             .to(".preloader .outro-title .char", {
-                x: isMobile ? "-3rem" : "-8rem",
+                x: isMobile ? "-1rem" : "-8rem",
                 duration: 1,
             }, 3.5)
             .to(".preloader .intro-title .first-char", {
-                x: isMobile ? "7.5rem" : "17rem",
-                y: isMobile ? "-1rem" : "-4rem",
+                x: isMobile ? "5.5rem" : "17rem",
+                y: isMobile ? "-1.75rem" : "-4rem",
                 fontWeight: "900",
                 scale: 0.75,
                 duration: 0.75,
             }, 4.5)
             .to(".preloader .outro-title .char", {
-                x: isMobile ? "-3rem" : "-8rem",
+                x: isMobile ? "-1rem" : "-8rem",
                 fontSize: isMobile ? "6rem" : "14rem",
                 fontWeight: "500",
                 duration: 0.75,

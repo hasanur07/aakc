@@ -58,7 +58,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
 
   return (
-    <main id="app-body" className="bg-[#F9FAFB] relative h-[100dvh] overflow-auto">
+    <main id="app-body" className="bg-[#F9FAFB] relative h-[100vh] overflow-auto">
       <HeroUIProvider navigate={router.push}>
         <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
         <DialogProvider></DialogProvider>

@@ -33,7 +33,7 @@ function HoverImage({ src, title }: HoverImageProps) {
                 alt={title}
                 width={400}
                 height={500}
-                className="w-full h-[300px] sm:h-[500px] rounded-xl object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                className="w-full h-[300px] sm:h-[500px] rounded-xl object-cover brightness-50 hover:brightness-100 transition-all duration-300"
             />
             {visible && (
                 <h2
