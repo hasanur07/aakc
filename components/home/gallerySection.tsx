@@ -3,6 +3,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Button } from "@heroui/button";
+import { ArrowRight02FreeIcons } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import AnimatedButton from "../buttons/animatedButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +21,7 @@ function HoverImage({ src, title }: HoverImageProps) {
 
     return (
         <div
-            className="relative flex flex-col gap-2 img"
+            className="relative flex flex-col gap-2 img cursor-pointer"
             onMouseEnter={() => setVisible(true)}
             onMouseLeave={() => setVisible(false)}
             onMouseMove={(e) => {
@@ -129,6 +133,16 @@ export default function GallerySection() {
 
             {/* Bottom gradient */}
             <div className="flex absolute bottom-0 w-full h-[250px] bg-gradient-to-b to-[#F9FAFB] from-white/0 pointer-events-none"></div>
+            <Button variant="solid" radius="full" color="success" size="lg" className="pr-1.5 pl-4 absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+                <AnimatedButton label="View Gallery" />
+                <div className="bg-white rounded-full flex justify-center items-center w-12 h-9">
+                    <HugeiconsIcon
+                        icon={ArrowRight02FreeIcons}
+                        size={32}
+                        color="black"
+                    />
+                </div>
+            </Button>
         </section>
     );
 }

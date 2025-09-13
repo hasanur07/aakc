@@ -66,7 +66,7 @@ export default function IntroPage() {
                 stagger: 0.05,
             }, 3)
             .to(".preloader .intro-title .first-char", {
-                x: isMobile ? "9rem" : "22.5rem",
+                x: isMobile ? "9rem" : "23.5rem",
                 duration: 1,
             }, 3.5)
             .to(".preloader .outro-title .char", {
@@ -74,7 +74,7 @@ export default function IntroPage() {
                 duration: 1,
             }, 3.5)
             .to(".preloader .intro-title .first-char", {
-                x: isMobile ? "5.5rem" : "17rem",
+                x: isMobile ? "5.75rem" : "17rem",
                 y: isMobile ? "-1.75rem" : "-4rem",
                 fontWeight: "900",
                 scale: 0.75,
