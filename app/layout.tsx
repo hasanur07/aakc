@@ -39,7 +39,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen font-body antialiased overflow-hidden",
+          "min-h-screen font-body antialiased",
           bodyFont.variable,
           headingFont.variable,
           monoFont.variable
