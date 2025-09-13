@@ -21,6 +21,15 @@ export default function IntroPage() {
 
         gsap.set(
             [
+                ".preloader .intro-title",
+                ".preloader .outro-title",
+            ],
+            { opacity: 100 })
+        gsap.set(".tags-overlay",
+            { opacity: 100 })
+
+        gsap.set(
+            [
                 ".split-overlay .intro-title .first-char span",
                 ".split-overlay .outro-title .char span",
             ],
@@ -132,10 +141,10 @@ export default function IntroPage() {
     return (
         <div ref={introRef} className='intro w-full h-[100dvh] fixed flex bg-[#0a0a0a] items-center justify-center font-mono font-bold' >
             <div className='preloader'>
-                <div className='intro-title'>
+                <div className='intro-title opacity-0'>
                     <h1 className='text-4xl mb-4'>AL AMEEN KNOWLEDGE CITY</h1>
                 </div>
-                <div className='outro-title'>
+                <div className='outro-title opacity-0'>
                     <h1 className='text-4xl mb-4'>MS</h1>
                 </div>
             </div>
@@ -147,7 +156,7 @@ export default function IntroPage() {
                     <h1 className='text-4xl mb-4'>MS</h1>
                 </div>
             </div>
-            <div className="tags-overlay">
+            <div className="tags-overlay opacity-0">
                 <div className="tag tag-1">
                     <p>LEARN</p>
                 </div>
