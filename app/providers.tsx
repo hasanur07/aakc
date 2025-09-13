@@ -58,7 +58,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
 
   return (
-    <main id="app-body" className="bg-[#F9FAFB] relative h-[100svh] overflow-auto">
+    <main id="app-body" className="bg-[#F9FAFB] relative h-[100svh] overflow-auto" style={{ clipPath: "polygon(0 48%, 0 48%, 0 52%, 0 52%)" }}>
       <HeroUIProvider navigate={router.push}>
         <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
         <DialogProvider></DialogProvider>
