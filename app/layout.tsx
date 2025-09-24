@@ -54,7 +54,7 @@ export default function RootLayout({
             </main>
             <footer className="flex flex-col border-t border-black max-w-7xl mx-auto w-full px-6 mt-12">
               <div className="py-4">
-                <h1>AL AMEEN KNOWLEDGE CITY</h1>
+                <h1 className="text-4xl font-bold font-heading">AL AMEEN KNOWLEDGE CITY</h1>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
                 <div className="flex flex-col gap-2">
