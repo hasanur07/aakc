@@ -7,6 +7,7 @@ import NoticeSection from "@/components/home/noticeSection";
 import { Button } from "@heroui/button";
 import { ArrowRight02FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -41,6 +42,14 @@ export default function Home() {
               />
             </div>
           </Button>
+        </div>
+        <div className="hidden md:flex">
+          <Image
+            src="/heart.webp"
+            alt="heart image"
+            width={300}
+            height={300}
+          />
         </div>
       </section>
       <AboutSection />
