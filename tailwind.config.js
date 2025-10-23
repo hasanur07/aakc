@@ -1,4 +1,4 @@
-import {heroui} from "@heroui/theme"
+import { heroui } from "@heroui/theme"
 import { body } from "framer-motion/client";
 
 /** @type {import('tailwindcss').Config} */
@@ -10,6 +10,9 @@ const config = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: "#F0E4DB",
+      },
       fontFamily: {
         body: ["var(--font-body)"],
         heading: ["var(--font-heading)"],

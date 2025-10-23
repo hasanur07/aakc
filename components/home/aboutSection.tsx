@@ -13,8 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
     useEffect(() => {
-        const appBody = document.querySelector("#app-body");
-        if (!appBody) return;
         splittTextElements(".about-section .title");
         splittTextElements(".about-section .paragraph");
         gsap.set(".about-section .title .word", { overflow: "hidden" });
@@ -31,7 +29,6 @@ export default function AboutSection() {
                     start: "top 90%",
                     end: "bottom 80%",
                     scrub: true,
-                    scroller: appBody,
                 }
             }
         );
@@ -45,7 +42,6 @@ export default function AboutSection() {
                     start: "top 80%",
                     end: "bottom 70%",
                     scrub: true,
-                    scroller: appBody,
                 }
             }
         );

@@ -8,7 +8,6 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { bodyFont, headingFont, monoFont } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
 import IntroPage from "@/components/intro/introPage";
 
 export const metadata: Metadata = {
@@ -35,11 +34,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en" className="overflow-hidden bg-[#F9FAFB] dark:bg-[#111827] text-[#111827] dark:text-[#F9FAFB]">
+    <html suppressHydrationWarning lang="en" className="bg-background text-black">
       <head />
       <body
         className={clsx(
-          "min-h-screen font-body antialiased",
+          "font-body antialiased",
           bodyFont.variable,
           headingFont.variable,
           monoFont.variable
@@ -47,8 +46,7 @@ export default function RootLayout({
       >
         <IntroPage />
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen">
-            <Navbar />
+          <div className="relative flex flex-col">
             <main className="container mx-auto max-w-7xl flex-grow">
               {children}
             </main>

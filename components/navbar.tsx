@@ -25,6 +25,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from "./dialog/
 import { Input } from "@heroui/input";
 import { dialog } from "./dialog/dialog";
 import AnimatedButton from "./buttons/animatedButton";
+import { ThemeSwitch } from "./theme-switch";
 
 // Replace this with your actual logo component or SVG
 export const AcmeLogo = () => (
@@ -38,7 +39,7 @@ export const Navbar = () => {
   };
 
   return (
-    <HerouiNavbar maxWidth="xl" position="sticky" className="bg-[#F9FAFB/50] backdrop-blur-lg">
+    <HerouiNavbar maxWidth="xl" position="sticky" className="bg-background/50">
       {/* Left: Brand */}
       <NavbarContent justify="start" className="basis-1/5 sm:basis-full">
         <NavbarBrand>
@@ -95,7 +96,10 @@ export const Navbar = () => {
       <NavbarContent justify="end" className="basis-1/5 sm:basis-full">
         {/* Desktop search */}
         <div className="hidden lg:flex">
-          <Button variant="faded" radius="full"
+          <Button
+            variant="faded"
+            radius="full"
+            className="bg-background/50"
             isIconOnly
             onPress={() => { dialog.show(<SearchDialog />) }}
           >
@@ -103,10 +107,11 @@ export const Navbar = () => {
           </Button>
         </div>
 
+
         {/* Admission button */}
         <NavbarItem className="hidden md:flex">
           <Button
-            className="font-normal text-default-600 bg-default-100"
+            className="font-normal text-default-600 bg-background/50"
             startContent={icons.user}
             variant="bordered"
             radius="full"

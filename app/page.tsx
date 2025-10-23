@@ -1,9 +1,11 @@
 "use client";
 
 import AnimatedButton from "@/components/buttons/animatedButton";
-import AboutSection from "@/components/home/aboutSection";
-import GallerySection from "@/components/home/gallerySection";
+import About from "@/components/home/about";
+import VerticalThreeColumnCarousel from "@/components/home/imageGrid";
 import NoticeSection from "@/components/home/noticeSection";
+import ThreeRowReviewCarousel from "@/components/home/review";
+import ReviewCarousel from "@/components/home/review";
 import { Button } from "@heroui/button";
 import { ArrowRight02FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -12,7 +14,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="flex h-[100svh] justify-between items-center -mt-16 gap-4 max-w-7xl pl-6">
+      <section className="flex h-[100vh] justify-between items-center -mt-16 gap-4 max-w-7xl px-6">
         <div className="flex flex-col gap-4 h-auto items-start">
           <div className="relative">
             <h1 className="text-3xl sm:text-5xl font-bold leading-12 sm:leading-16 relative">
@@ -25,7 +27,7 @@ export default function Home() {
             <div className="absolute top-1 sm:top-3 left-48 sm:left-76 px-4 py-2 rounded-full bg-yellow-500 text-black">
               <p>😃 Enjoy</p>
             </div>
-            <div className="absolute top-24 sm:top-26 left-18 sm:left-40 px-4 py-2 rounded-full bg-green-500 mix-blend text-white border-4 border-white">
+            <div className="absolute top-24 sm:top-26 left-18 sm:left-40 px-4 py-2 rounded-full bg-green-500 mix-blend text-white border-4 border-background">
               <p>📚 Learn</p>
             </div>
             <div className="absolute top-28 sm:top-auto sm:bottom-3 left-46 sm:left-auto sm:right-18 px-4 py-2 rounded-full bg-blue-600 text-white">
@@ -45,17 +47,18 @@ export default function Home() {
         </div>
         <div className="hidden md:flex">
           <Image
-            src="/heart.webp"
+            src="/models/student-tr.png"
             alt="heart image"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
           />
         </div>
       </section>
-      <AboutSection />
-      <GallerySection />
+      <About />
+      <VerticalThreeColumnCarousel />
       <NoticeSection />
-      <section className="flex flex-col h-[100svh] justify-center items-start gap-4 max-w-7xl px-6">
+      <ThreeRowReviewCarousel/>
+      <section className="flex flex-col h-[100vh] justify-center items-start gap-4 max-w-7xl px-6">
         <h2 className="text-3xl font-semibold leading-10">
           Discover More About Us
         </h2>

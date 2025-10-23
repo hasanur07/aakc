@@ -58,8 +58,7 @@ export default function GallerySection() {
     const col3Ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const appBody = document.querySelector("#app-body");
-        if (!sectionRef.current || !appBody) return;
+        if (!sectionRef.current) return;
 
         let ctx = gsap.context(() => {
             const options = {
@@ -67,7 +66,6 @@ export default function GallerySection() {
                 start: "top bottom",
                 end: "bottom top",
                 scrub: true,
-                scroller: appBody,
             };
 
             if (col1Ref.current) {
@@ -91,10 +89,10 @@ export default function GallerySection() {
     return (
         <section
             ref={sectionRef}
-            className="flex flex-col relative h-[calc(100vh+300px)] gap-4 max-w-7xl px-6 overflow-hidden"
+            className="flex flex-col relative h-[calc(100vh+700px)] gap-4 max-w-7xl px-6 overflow-hidden"
         >
             {/* Top gradient */}
-            <div className="flex absolute top-0 w-full h-[250px] bg-gradient-to-b from-[#F9FAFB] to-white/0 z-10 pointer-events-none"></div>
+            <div className="flex absolute top-0 w-full h-[250px] bg-gradient-to-b from-background to-white/0 z-10 pointer-events-none"></div>
 
             <div className="grid grid-cols-3 gap-2 sm:gap-8 w-full">
                 {/* Column 1 */}
@@ -132,7 +130,7 @@ export default function GallerySection() {
             </div>
 
             {/* Bottom gradient */}
-            <div className="flex absolute bottom-0 w-full h-[250px] bg-gradient-to-b to-[#F9FAFB] from-white/0 pointer-events-none"></div>
+            <div className="flex absolute bottom-0 w-full h-[250px] bg-gradient-to-b to-background from-white/0 pointer-events-none"></div>
             <Button variant="solid" radius="full" color="success" size="lg" className="pr-1.5 pl-4 absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
                 <AnimatedButton label="View Gallery" />
                 <div className="bg-white rounded-full flex justify-center items-center w-12 h-9">

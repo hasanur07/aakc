@@ -14,6 +14,7 @@ export default function IntroPage() {
     const introRef = React.useRef<HTMLDivElement>(null);
     const isMobile = useIsMobile();
     React.useEffect(() => {
+        window.scrollTo(0, 0);
         CustomEase.create("hop", ".8, 0, .3, 1");
         splittTextElements(".intro-title h1", "words, chars", true);
         splittTextElements('.outro-title h1');
@@ -135,7 +136,10 @@ export default function IntroPage() {
             .to("#app-body", {
                 clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 duration: 1,
-            }, 6);
+            }, 6)
+            .to("#app-body", {
+                height: "auto",
+            }, 7);
 
     }, []);
     return (
