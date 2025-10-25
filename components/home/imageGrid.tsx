@@ -74,7 +74,7 @@ export default function VerticalThreeColumnCarousel() {
 
     return (
         <section className="relative flex w-full h-[100vh] overflow-hidden gap-2">
-            <div className="flex absolute top-0 left-0 w-full h-full bg-gradient-to-br to-blue-500 from-blue-500/10 from-65%"></div>
+            <div className="flex absolute top-0 left-0 w-full h-full bg-gradient-to-br to-[#9396ba] from-transparent"></div>
             {/* Left column */}
             <div className="relative w-[35%] h-full overflow-hidden">
                 <div ref={leftRef} className={columnStyle}>
@@ -104,10 +104,11 @@ export default function VerticalThreeColumnCarousel() {
 
             <div className="flex absolute top-0 left-0 w-full h-full bg-blue-500/10"></div>
             <div className="flex absolute top-0 left-0 w-full h-full justify-center items-center z-10">
-                <div className="mb-52 rounded-2xl p-[2px] bg-gradient-to-tl from-yellow-500 to-red-500">
+                <div className="rounded-full p-[2px] bg-gradient-to-tl to-blue-500 from-green-500">
                     <Button
                         size="lg"
-                        className="bg-black text-white h-18"
+                        radius="full"
+                        className="bg-white/70 text-black h-16 backdrop-blur-sm"
                         endContent={<HugeiconsIcon icon={ArrowRight01Icon} />}
                         disableAnimation
                     >

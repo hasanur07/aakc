@@ -5,7 +5,6 @@ import About from "@/components/home/about";
 import VerticalThreeColumnCarousel from "@/components/home/imageGrid";
 import NoticeSection from "@/components/home/noticeSection";
 import ThreeRowReviewCarousel from "@/components/home/review";
-import ReviewCarousel from "@/components/home/review";
 import { Button } from "@heroui/button";
 import { ArrowRight02FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -14,7 +13,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="flex h-[100vh] justify-between items-center -mt-16 gap-4 max-w-7xl px-6">
+      <section className="flex relative h-[100vh] justify-between items-center -mt-16 gap-4 max-w-7xl px-6">
         <div className="flex flex-col gap-4 h-auto items-start">
           <div className="relative">
             <h1 className="text-3xl sm:text-5xl font-bold leading-12 sm:leading-16 relative">
@@ -57,26 +56,7 @@ export default function Home() {
       <About />
       <VerticalThreeColumnCarousel />
       <NoticeSection />
-      <ThreeRowReviewCarousel/>
-      <section className="flex flex-col h-[100vh] justify-center items-start gap-4 max-w-7xl px-6">
-        <h2 className="text-3xl font-semibold leading-10">
-          Discover More About Us
-        </h2>
-        <p className="max-w-xl text-lg">
-          Explore our programs, events, and community initiatives designed to
-          foster growth and learning.
-        </p>
-        <Button variant="solid" radius="full" color="primary" size="lg" className="pr-1.5 pl-4 mt-2">
-          <AnimatedButton label="Learn More" />
-          <div className="bg-white rounded-full flex justify-center items-center w-12 h-9">
-            <HugeiconsIcon
-              icon={ArrowRight02FreeIcons}
-              size={32}
-              color="black"
-            />
-          </div>
-        </Button>
-      </section>
+      <ThreeRowReviewCarousel />
     </>
   );
 }

@@ -99,7 +99,7 @@ export const Navbar = () => {
           <Button
             variant="faded"
             radius="full"
-            className="bg-background/50"
+            className="bg-background/50 border-white/50"
             isIconOnly
             onPress={() => { dialog.show(<SearchDialog />) }}
           >
@@ -111,7 +111,7 @@ export const Navbar = () => {
         {/* Admission button */}
         <NavbarItem className="hidden md:flex">
           <Button
-            className="font-normal text-default-600 bg-background/50"
+            className="font-normal text-default-600 bg-background/50 border-white/50"
             startContent={icons.user}
             variant="bordered"
             radius="full"

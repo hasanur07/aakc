@@ -11,7 +11,8 @@ const config = {
   theme: {
     extend: {
       colors: {
-        background: "#F0E4DB",
+        // background: "#F0E4DB",
+        background: "#EFF6FF",
       },
       fontFamily: {
         body: ["var(--font-body)"],
