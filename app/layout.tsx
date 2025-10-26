@@ -9,7 +9,6 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { bodyFont, headingFont, monoFont } from "@/config/fonts";
 import IntroPage from "@/components/intro/introPage";
-import TextPressure from "@/components/ui/textPresser";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {

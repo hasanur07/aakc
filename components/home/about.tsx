@@ -33,32 +33,32 @@ export default function About() {
         tl.to(".about-sec .text-1 .word .char", {
             opacity: 1,
             stagger: 0.02,
-            duration: 1,
+            duration: 0.5,
         })
             .to(".about-sec .text-1 .word .char", {
                 opacity: 0,
                 stagger: 0.02,
-                duration: 1,
+                duration: 0.5,
             })
             .to(".about-sec .text-2 .word .char", {
                 opacity: 1,
                 stagger: 0.02,
-                duration: 1,
+                duration: 0.5,
             })
             .to(".about-sec .text-2 .word .char", {
                 opacity: 0,
                 stagger: 0.02,
-                duration: 1,
+                duration: 0.5,
             })
             .to(".about-sec .text-3 .word .char", {
                 opacity: 1,
                 stagger: 0.02,
-                duration: 1,
+                duration: 0.5,
             })
             .to(".about-sec .text-3 .word .char", {
                 opacity: 0,
                 stagger: 0.02,
-                duration: 1,
+                duration: 0.5,
             });
 
         // Cleanup on unmount

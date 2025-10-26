@@ -45,7 +45,7 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-            <div className="w-full flex items-center justify-between py-3 mt-6 max-w-7xl mx-auto px-6">
+            <div className="w-full flex items-center justify-between py-3 pb-5 mt-6 max-w-7xl mx-auto px-6">
                 <span>©2025 Al Ameen Knowledge City</span>
                 <Link
                     isExternal
@@ -53,7 +53,7 @@ export default function Footer() {
                     href="https://hasanur.doclet.app?utm_source=aakc"
                     title="hasanur.12 portfolio"
                 >
-                    <p>by <strong className="text-blue-500 font-normal">hasanur.io</strong></p>
+                    <p>by <strong className="text-red-500 font-normal">hasanur.io</strong></p>
                 </Link>
             </div>
         </div>

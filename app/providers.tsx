@@ -10,6 +10,7 @@ import gsap from "gsap";
 import { useEffect } from "react";
 import Lenis from 'lenis';
 import { Navbar } from "@/components/navbar";
+import PageTransition from "@/components/transition/pageTransition";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -55,11 +56,15 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   return (
     <main id="app-body" className="bg-background h-[100dvh] relative" style={{ clipPath: "polygon(0 48%, 0 48%, 0 52%, 0 52%)" }}>
-      <Navbar />
-      <HeroUIProvider navigate={router.push}>
-        <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-        <DialogProvider></DialogProvider>
-      </HeroUIProvider>
+      <PageTransition>
+        <>
+          <Navbar />
+          <HeroUIProvider navigate={router.push}>
+            <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+            <DialogProvider />
+          </HeroUIProvider>
+        </>
+      </PageTransition>
     </main>
   );
 }

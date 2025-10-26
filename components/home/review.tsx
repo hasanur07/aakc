@@ -79,10 +79,10 @@ const ReviewRow: React.FC<ReviewRowProps> = ({ reviews, direction, duration }) =
 export default function ThreeRowReviewCarousel() {
   return (
     <div className="flex flex-col justify-center items-center gap-4">
-      <section className="flex flex-col pt-16 rounded-full overflow-hidden relative w-full">
+      <section className="flex flex-col pt-16 rounded-b-full overflow-hidden relative w-full">
         <div className="flex flex-col justify-center items-center z-20">
           <p className="text-blue-500">Wall Of Love</p>
-          <h5 className="text-4xl font-semibold">Parents Love Our AAKC</h5>
+          <h5 className="text-4xl font-semibold text-center">Parents Love Our AAKC</h5>
           <span className="w-[38rem] text-center mt-2 opacity-55">We've been blown away by the ongoing support from our incredeble parents. Thy inspired us every day, every moment.</span>
         </div>
         <div className="flex flex-col gap-2 w-full mt-16">
@@ -90,7 +90,7 @@ export default function ThreeRowReviewCarousel() {
           <ReviewRow reviews={reviewsRow2} direction="right" duration={30} />
           <ReviewRow reviews={reviewsRow3} direction="left" duration={10} />
         </div>
-        <div className="flex absolute top-0 left-0 pb-16 w-full h-full rounded-full bg-[radial-gradient(circle,rgba(0,0,255,0)_0%,rgba(239,246,255,1)_70%)]"></div>
+        <div className="flex absolute top-0 left-0 pb-16 w-full h-full rounded-b-full bg-[radial-gradient(circle,rgba(0,0,255,0)_0%,rgba(239,246,255,1)_70%)]"></div>
       </section>
       <div className="flex w-full h-10 bg-background -mt-10 z-10 blur-xl"></div>
       <Button
