@@ -25,7 +25,7 @@ export default function PageTransition({ children }: { children: ReactElement })
 
             for (let i = 0; i < 20; i++) {
                 const block = document.createElement("div");
-                block.className.add("flex-1 h-screen bg-[#222] scale-x-0 origin-left");
+                block.classList.add("flex-1 h-screen bg-[#222] scale-x-0 origin-left");
                 overlayRef.current.appendChild(block);
                 blocksRef.current.push(block);
             }
