@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <div ref={containerRef} className="flex flex-col w-full">
       <h1
-        className="font-mono font-bold"
+        className="font-mono font-bold text-center"
         style={{
           fontSize,
           whiteSpace: "nowrap",
