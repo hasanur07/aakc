@@ -8,8 +8,8 @@ export default function AboutPage() {
 
   const setSize = () => {
     if (!containerRef.current) return;
-    const { width } = containerRef.current.getBoundingClientRect();
-    const newFontSize = width / (text.length * 1.5); // adjust multiplier for fit
+    const { width }  = containerRef.current.getBoundingClientRect();
+    const newFontSize = width / (text.length / 1.5);
     setFontSize(newFontSize);
   };
 
@@ -24,6 +24,7 @@ export default function AboutPage() {
   return (
     <div ref={containerRef} className="flex flex-col w-full">
       <h1
+        className="font-mono font-bold"
         style={{
           fontSize,
           whiteSpace: "nowrap",
@@ -31,6 +32,9 @@ export default function AboutPage() {
       >
         {text}
       </h1>
+      <div className="flex w-full h-screen">
+        
+      </div>
     </div>
   );
 }
