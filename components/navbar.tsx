@@ -13,7 +13,6 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenu,
-  NavbarMenuItem,
   NavbarMenuToggle,
 } from "@heroui/navbar";
 import Link from "next/link";
@@ -21,14 +20,12 @@ import Image from "next/image";
 import { SearchIcon, UserIcon } from "@/components/icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArcherIcon, ArrowDownIcon, Contact01Icon, InformationCircleFreeIcons, Message01Icon, User02Icon, User03Icon, VisionFreeIcons } from "@hugeicons/core-free-icons";
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "./dialog/dialogProvider";
+import { Dialog, DialogTitle } from "./dialog/dialogProvider";
 import { Input } from "@heroui/input";
 import { dialog } from "./dialog/dialog";
 import AnimatedButton from "./buttons/animatedButton";
-import { ThemeSwitch } from "./theme-switch";
 import { useRouter } from "next/navigation";
 
-// Replace this with your actual logo component or SVG
 export const AcmeLogo = () => (
   <Image src="/logo_tr.png" alt="AAKC MS" width={32} height={32} className="h-8 w-8" />
 );

@@ -6,7 +6,7 @@ import { Link } from "@heroui/link"
 
 export default function Footer() {
     return (
-        <div className="mt-12">
+        <div className="mt-16 bg-black text-white">
             <footer className="flex flex-col max-w-7xl mx-auto w-full px-6">
                 <div>
                     <TextPressure
@@ -17,13 +17,13 @@ export default function Footer() {
                         width={true}
                         weight={true}
                         italic={false}
-                        textColor="#000"
+                        textColor="#fff"
                         minFontSize={36}
                     />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
-                    <div className="flex flex-col gap-1 justify-start items-start">
-                        <h2 className="mb-2">Contact Us</h2>
+                    <div className="flex flex-col gap-1 justify-start items-start text-white">
+                        <h2 className="mb-2 text-white">Contact Us</h2>
                         <p className="opacity-55">Barabaria<br></br>
                             North 24 PGS, WB, Kol-700121<br></br>
                             Email: info@aakcedu.com<br></br>
@@ -50,6 +50,7 @@ export default function Footer() {
                 <Link
                     isExternal
                     color="foreground"
+                    className="text-white"
                     href="https://hasanur.doclet.app?utm_source=aakc"
                     title="hasanur.12 portfolio"
                 >

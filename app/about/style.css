@@ -1,0 +1,42 @@
+:root {
+  --w: 320px;
+  --h: 460px;
+  --angle-rot: -12deg;
+  --angle-skew: -8deg;
+  --radius: 34px;
+}
+
+.stage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.card-wrap {
+  width: calc(var(--w) + 120px);
+  height: calc(var(--h) + 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: var(--w);
+  height: var(--h);
+  background: #000;
+  border-radius: 44px 22px 48px 42px;
+  transform: rotate(var(--angle-rot)) skewX(var(--angle-skew));
+  transform-origin: center center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 420px) {
+  :root {
+    --w: 220px;
+    --h: 320px;
+    --angle-rot: -12deg;
+    --angle-skew: -6deg;
+  }
+}

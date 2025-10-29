@@ -5,7 +5,6 @@ import { ReactElement, useEffect, useRef } from "react";
 import { NewLogo } from "../icons";
 import gsap from "gsap";
 
-
 export default function PageTransition({ children }: { children: ReactElement }) {
     const router = useRouter();
     const pathname = usePathname();
@@ -14,6 +13,7 @@ export default function PageTransition({ children }: { children: ReactElement })
     const logoRef = useRef<SVGSVGElement>(null);
     const blocksRef = useRef<HTMLDivElement[]>([]);
     const isTransitioning = useRef(false);
+    const firstTime = useRef(true);
 
     useEffect(() => {
         const createBlock = () => {
@@ -81,6 +81,7 @@ export default function PageTransition({ children }: { children: ReactElement })
     }, [router, pathname]);
 
     const coverpage = (url: string) => {
+        firstTime.current = false;
         document.body.style.overflow = "hidden";
         const logoPath = logoRef.current?.querySelector("path");
         const tl = gsap.timeline({
@@ -128,7 +129,9 @@ export default function PageTransition({ children }: { children: ReactElement })
             transformOrigin: "right",
             onComplete: () => {
                 isTransitioning.current = false;
-                document.body.style.overflow = "auto";
+                if (!firstTime.current) {
+                    document.body.style.overflow = "auto";
+                }
             }
         })
     }
