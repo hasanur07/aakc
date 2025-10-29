@@ -63,7 +63,7 @@ export default function About() {
 
         // tuning params
         const each = 0.1; // stagger (seconds per word) — smaller = tighter overlap
-        const gapWords = 15; // how many words gap before bg fades out and text fades in
+        const gapWords = 10; // how many words gap before bg fades out and text fades in
         const bgAlpha = 0.1; // target background darkness
 
         // build timeline controlled by ScrollTrigger
