@@ -62,7 +62,11 @@ export default function DetailsSection() {
                 height: "100%",
                 top: "0%",
                 ease: "none",
-            });
+            }, 'img').to(images[index - 1], {
+                height: "0%",
+                top: "0%",
+                ease: "none",
+            }, 'img');
         });
 
 
