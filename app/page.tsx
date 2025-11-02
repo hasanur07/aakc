@@ -2,6 +2,7 @@
 
 import AnimatedButton from "@/components/buttons/animatedButton";
 import About from "@/components/home/about";
+import DetailsSection from "@/components/home/detailsSection";
 import VerticalThreeColumnCarousel from "@/components/home/imageGrid";
 import NoticeSection from "@/components/home/noticeSection";
 import ThreeRowReviewCarousel from "@/components/home/review";
@@ -54,6 +55,7 @@ export default function Home() {
         </div>
       </section>
       <About />
+      <DetailsSection />
       <VerticalThreeColumnCarousel />
       <NoticeSection />
       <ThreeRowReviewCarousel />
