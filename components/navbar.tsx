@@ -25,6 +25,7 @@ import { Input } from "@heroui/input";
 import { dialog } from "./dialog/dialog";
 import AnimatedButton from "./buttons/animatedButton";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export const AcmeLogo = () => (
   <Image src="/logo_tr.png" alt="AAKC MS" width={32} height={32} className="h-8 w-8" />
@@ -37,8 +38,53 @@ export const Navbar = () => {
   };
   const router = useRouter();
 
+  const [hidden, setHidden] = useState(false);
+  let lastScrollY = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Show navbar when at top
+      if (currentScroll < windowHeight) {
+        setHidden(false);
+        lastScrollY = 0;
+        return;
+      }
+
+      // Detect bottom of page → show navbar
+      const fullPageHeight = document.body.scrollHeight;
+      const scrolledToBottom = Math.ceil(windowHeight + window.scrollY) >= fullPageHeight;
+
+      if (scrolledToBottom) {
+        setHidden(false);
+        lastScrollY = currentScroll;
+        return;
+      }
+
+      // Scroll direction logic
+      if (currentScroll > lastScrollY) {
+        // scrolling down → hide
+        setHidden(true);
+      } else {
+        // scrolling up → show
+        setHidden(false);
+      }
+
+      lastScrollY = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <HerouiNavbar maxWidth="xl" position="sticky" className="bg-background/50">
+    <HerouiNavbar maxWidth="xl" position="sticky"
+      className={`
+    bg-background border-b border-black/10 transition-transform duration-300
+    ${hidden ? "-translate-y-full" : "translate-y-0"}
+  `}>
       {/* Left: Brand */}
       <NavbarContent justify="start" className="basis-1/5 sm:basis-full">
         <NavbarBrand>
@@ -98,7 +144,7 @@ export const Navbar = () => {
           <Button
             variant="faded"
             radius="full"
-            className="bg-background/50 border-white/50"
+            className="border-black/10 bg-black/5 p-2"
             isIconOnly
             onPress={() => { dialog.show(<SearchDialog />) }}
           >

@@ -41,7 +41,15 @@ export default function AboutPage() {
       <div className="flex flex-col w-full min-h-screen items-start px-6 justify-center">
         <p className="text-[10px]">OUR VISION</p>
         <h1 className="font-extrabold text-5xl uppercase mt-2">DELIVER SKILL-BASED<br />EDUCATION</h1>
-        <div className="flex w-full h-[50vh]"></div>
+        <div className="flex w-full h-[50vh] justify-center items-center mt-6">
+          <Image
+            src="/models/skill-3d-icon.webp"
+            alt="Our Vision"
+            width={300}
+            height={300}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
         <span className="text-[14px] mt-2 max-w-sm tracking-widest leading-tight">
           We aim to provide students with practical skills that prepare them for
           real-world challenges, ensuring they are job-ready upon graduation.

@@ -83,7 +83,7 @@ export default function ThreeRowReviewCarousel() {
         <div className="flex flex-col justify-center items-center z-20">
           <p className="text-blue-500">Wall Of Love</p>
           <h5 className="text-4xl font-semibold text-center">Parents Love Our AAKC</h5>
-          <span className="w-[38rem] text-center mt-2 opacity-55">We've been blown away by the ongoing support from our incredeble parents. Thy inspired us every day, every moment.</span>
+          <span className="sm:w-[38rem] px-2 text-center mt-2 opacity-55">We've been blown away by the ongoing support from our incredeble parents. Thy inspired us every day, every moment.</span>
         </div>
         <div className="flex flex-col gap-2 w-full mt-16">
           <ReviewRow reviews={reviewsRow1} direction="left" duration={30} />

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Button } from "@heroui/button";
 import AnimatedButton from "../buttons/animatedButton";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
+import { ArrowRight01Icon, ArrowRight02FreeIcons } from "@hugeicons/core-free-icons";
 
 const imagesLeft = ["/gallery/img1.webp", "/gallery/img2.webp", "/gallery/img3.webp"];
 const imagesCenter = ["/gallery/img4.webp", "/gallery/img5.webp", "/gallery/img6.webp"];
@@ -101,18 +101,24 @@ export default function VerticalThreeColumnCarousel() {
                 </div>
             </div>
 
-            <div className="flex absolute top-0 left-0 w-full h-full bg-blue-500/10"></div>
+            <div className="flex absolute top-0 left-0 w-full h-full"></div>
             <div className="flex absolute top-0 left-0 w-full h-full justify-center items-center z-10">
                 <div className="rounded-full p-[2px] bg-gradient-to-tl to-blue-500 from-green-500">
                     <Button
                         size="lg"
                         radius="full"
-                        className="bg-white text-black h-16"
-                        endContent={<HugeiconsIcon icon={ArrowRight01Icon} />}
+                        className="bg-white text-black h-14 px-3 gap-2 flex items-center"
                         disableAnimation
                     >
                         <h5 className="font-bold bg-gradient-to-tl to-yellow-500 from-red-500 text-transparent bg-clip-text">+100</h5>
                         <AnimatedButton label="View Gallery" />
+                        <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                            <HugeiconsIcon
+                                icon={ArrowRight02FreeIcons}
+                                size={32}
+                                color="white"
+                            />
+                        </div>
                     </Button>
                 </div>
             </div>

@@ -4,7 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@heroui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { StarIcon } from "@hugeicons/core-free-icons";
+import { ArrowRight02FreeIcons, ArrowUpRight01Icon, StarIcon } from "@hugeicons/core-free-icons";
+import AnimatedButton from "../buttons/animatedButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,11 +62,11 @@ export default function DetailsSection() {
             }).to(img, {
                 height: "100%",
                 top: "0%",
-                ease: "none",
+                ease: "power1.in",
             }, 'img').to(images[index - 1], {
                 height: "0%",
                 top: "0%",
-                ease: "none",
+                ease: "power1.in",
             }, 'img');
         });
 
@@ -75,8 +76,8 @@ export default function DetailsSection() {
 
     return (
         <div className="flex w-full h-[420vh] px-4 sm:px-8">
-            <div ref={contenerRef} className="flex w-full h-[100vh]">
-                <div className="contener-inner flex flex-col-reverse sm:flex-row relative w-full h-[calc(100vh-5.5rem)] sm:h-[calc(100vh-8.5rem)] rounded-4xl mt-18 sm:mt-22 mb-4 sm:mb-12 border border-gray-500 p-4 sm:p-8">
+            <div ref={contenerRef} className="flex w-full h-[100vh] items-center">
+                <div className="contener-inner flex flex-col-reverse sm:flex-row relative w-full h-[calc(100vh-2.5rem)] sm:h-[calc(100vh-8.5rem)] rounded-4xl border border-black/10 p-4 sm:p-8">
                     {/* Text Section */}
                     <div className="details-container flex relative w-full h-1/2 sm:w-1/2 sm:h-full">
                         <div className="details-content flex flex-col justify-center items-start h-full absolute left-0 top-0 pr-8 pt-4 sm:pt-0">
@@ -90,8 +91,15 @@ export default function DetailsSection() {
                             <p className="text-sm sm:text-lg mb-6">
                                 At Al Ameen Knowledge City Missionary School, we pride ourselves on providing a nurturing environment that fosters academic excellence and personal growth.
                             </p>
-                            <Button variant="solid" radius="full" color="primary">
-                                Learn More
+                            <Button variant="solid" radius="full" color="primary" className="p-2 pl-4 h-12">
+                                <AnimatedButton label="Learn More" />
+                                <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                                    <HugeiconsIcon
+                                        icon={ArrowUpRight01Icon}
+                                        size={30}
+                                        color="white"
+                                    />
+                                </div>
                             </Button>
                         </div>
                         <div className="details-content flex flex-col justify-center h-full absolute left-0 top-0 opacity-0 pr-8 items-start pt-4 sm:pt-0">
@@ -105,8 +113,15 @@ export default function DetailsSection() {
                             <p className="text-sm sm:text-lg mb-4">
                                 We offer a comprehensive curriculum that integrates modern teaching methodologies with traditional values.
                             </p>
-                            <Button variant="solid" radius="full" color="primary">
-                                Learn More
+                            <Button variant="solid" radius="full" color="primary" className="p-2 pl-4 h-12">
+                                <AnimatedButton label="Learn More" />
+                                <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                                    <HugeiconsIcon
+                                        icon={ArrowUpRight01Icon}
+                                        size={30}
+                                        color="white"
+                                    />
+                                </div>
                             </Button>
                         </div>
                         <div className="details-content flex flex-col justify-center h-full absolute left-0 top-0 opacity-0 pr-8 items-start pt-4 sm:pt-0">
@@ -120,8 +135,15 @@ export default function DetailsSection() {
                             <p className="text-sm sm:text-lg mb-4">
                                 We are committed to nurturing lifelong learners equipped with skills and values to navigate an ever-changing world.
                             </p>
-                            <Button variant="solid" radius="full" color="primary">
-                                Learn More
+                            <Button variant="solid" radius="full" color="primary" className="p-2 pl-4 h-12">
+                                <AnimatedButton label="Learn More" />
+                                <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                                    <HugeiconsIcon
+                                        icon={ArrowUpRight01Icon}
+                                        size={30}
+                                        color="white"
+                                    />
+                                </div>
                             </Button>
                         </div>
                     </div>
@@ -130,22 +152,22 @@ export default function DetailsSection() {
                     <div className="flex relative sm:w-1/2 sm:h-full w-full h-1/2">
                         <div className="image-container flex relative w-full h-full rounded-2xl overflow-hidden">
                             <Image
-                                src="/imgs/pexels-photo-32094622.jpeg"
-                                className="img w-full h-full object-cover absolute inset-0"
+                                src="/imgs/pexels-alex-seb-426039033-34686217.jpg"
+                                className="img w-full h-full object-cover absolute inset-0 ease-soft-spring"
                                 alt="details image"
                                 width={400}
                                 height={600}
                             />
                             <Image
-                                src="/imgs/pexels-photo-1181395.jpeg"
-                                className="img w-full h-0 object-cover absolute top-full inset-0"
+                                src="/imgs/pexels-esra-afsar-123882149-34644107.jpg"
+                                className="img w-full h-0 object-cover absolute top-full inset-0 ease-soft-spring"
                                 alt="details image"
                                 width={400}
                                 height={600}
                             />
                             <Image
-                                src="/imgs/pexels-photo-3184328.jpeg"
-                                className="img w-full h-0 object-cover absolute top-full inset-0"
+                                src="/imgs/pexels-anhdanghihi-34313658.jpg"
+                                className="img w-full h-0 object-cover absolute top-full inset-0 ease-soft-spring"
                                 alt="details image"
                                 width={400}
                                 height={600}

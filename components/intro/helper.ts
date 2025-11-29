@@ -1,5 +1,8 @@
 "use client";
+import gsap from "gsap/all";
 import SplitText from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
 
 export const splittTextElements = (selector: string, type = "words, chars", addFirstChar = false) => {
     const elements = document.querySelectorAll<HTMLElement>(selector);

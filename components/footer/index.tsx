@@ -3,10 +3,15 @@
 import React from "react"
 import TextPressure from "../ui/textPresser"
 import { Link } from "@heroui/link"
+import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 
 export default function Footer() {
     return (
-        <div className="mt-16 bg-black text-white">
+        <div className="mt-16">
+            <div className="flex w-full px-4 h-24 bg-black text-white justify-center items-center gap-4">
+                <h5 className="text-lg">Learn -  Grow - Succeed</h5>
+            </div>
             <footer className="flex flex-col max-w-7xl mx-auto w-full px-6">
                 <div>
                     <TextPressure
@@ -17,13 +22,13 @@ export default function Footer() {
                         width={true}
                         weight={true}
                         italic={false}
-                        textColor="#fff"
+                        textColor="#000"
                         minFontSize={36}
                     />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
-                    <div className="flex flex-col gap-1 justify-start items-start text-white">
-                        <h2 className="mb-2 text-white">Contact Us</h2>
+                    <div className="flex flex-col gap-1 justify-start items-start text-black">
+                        <h2 className="mb-2 text-black">Contact Us</h2>
                         <p className="opacity-55">Barabaria<br></br>
                             North 24 PGS, WB, Kol-700121<br></br>
                             Email: info@aakcedu.com<br></br>
@@ -38,10 +43,10 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col gap-2">
                         <h2 className="fmb-2">Follow Us</h2>
-                        <Link href="#" className="text-current opacity-55">Facebook</Link>
-                        <Link href="#" className="text-current opacity-55">Twitter</Link>
-                        <Link href="#" className="text-current opacity-55">Instagram</Link>
-                        <Link href="#" className="text-current opacity-55">LinkedIn</Link>
+                        <Link href="#" className="text-current opacity-55">Facebook <HugeiconsIcon icon={ArrowUpRight01Icon} size={18}/></Link>
+                        <Link href="#" className="text-current opacity-55">Twitter <HugeiconsIcon icon={ArrowUpRight01Icon} size={18}/></Link>
+                        <Link href="#" className="text-current opacity-55">Instagram <HugeiconsIcon icon={ArrowUpRight01Icon} size={18}/></Link>
+                        <Link href="#" className="text-current opacity-55">LinkedIn <HugeiconsIcon icon={ArrowUpRight01Icon} size={18}/></Link>
                     </div>
                 </div>
             </footer>
@@ -50,11 +55,11 @@ export default function Footer() {
                 <Link
                     isExternal
                     color="foreground"
-                    className="text-white"
+                    className="text-black/70 hover:text-blue-500"
                     href="https://hasanur.doclet.app?utm_source=aakc"
                     title="hasanur.12 portfolio"
                 >
-                    <p>by <strong className="text-red-500 font-normal">hasanur.io</strong></p>
+                    <p>by <strong className="text-blue-500 font-normal">hasanur.io</strong></p>
                 </Link>
             </div>
         </div>
