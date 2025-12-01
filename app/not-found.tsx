@@ -51,7 +51,7 @@ export default function NotFound() {
                     hasanur.io
                 </Button>
             </nav>
-            <section ref={containerRef} className="flex relative m-0 p-0 w-full h-[100svh] justify-center items-center bg-gradient-to-b from-sky-200 to-white overflow-hidden">
+            <section ref={containerRef} className={`flex relative m-0 p-0 w-full h-[100svh] justify-center items-center bg-gradient-to-b from-sky-200 to-white overflow-hidden ${antonFont.className} ${antonFont.variable}`}>
                 <h5 className="bg-gradient-to-b from-white to-sky-50 bg-clip-text text-transparent font-anton" style={{ fontSize, fontWeight: 600 }}>{text}</h5>
                 <Image
                     src="/imgs/res/cloud.png"
