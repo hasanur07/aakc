@@ -1,4 +1,4 @@
-import { bodyFont, headingFont, monoFont } from "@/config/fonts";
+import { antonFont, bodyFont, headingFont, monoFont } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
@@ -31,7 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     "font-body antialiased",
                     bodyFont.variable,
                     headingFont.variable,
-                    monoFont.variable
+                    monoFont.variable,
+                    antonFont.variable
                 )}
             >{children}
             </body>
