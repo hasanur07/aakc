@@ -143,8 +143,8 @@ export default function IntroPage() {
 
     }, []);
     return (
-        <div ref={introRef} className='intro w-full h-[100dvh] fixed flex bg-[#0a0a0a] items-center justify-center font-mono font-bold' >
-            <div className='preloader'>
+        <div ref={introRef} className='intro w-full h-[100dvh] fixed flex bg-[#0a0a0a] dark:bg-white items-center justify-center font-mono font-bold' >
+            <div className='preloader text-white dark:text-black bg-black dark:bg-white'>
                 <div className='intro-title opacity-0'>
                     <h1 className='text-4xl mb-4'>AL AMEEN KNOWLEDGE CITY</h1>
                 </div>
@@ -152,7 +152,7 @@ export default function IntroPage() {
                     <h1 className='text-4xl mb-4'>MS</h1>
                 </div>
             </div>
-            <div className='split-overlay'>
+            <div className='split-overlay text-white dark:text-black bg-black dark:bg-white'>
                 <div className='intro-title'>
                     <h1 className='text-4xl mb-4'>AL AMEEN KNOWLEDGE CITY</h1>
                 </div>
@@ -160,7 +160,7 @@ export default function IntroPage() {
                     <h1 className='text-4xl mb-4'>MS</h1>
                 </div>
             </div>
-            <div className="tags-overlay opacity-0">
+            <div className="tags-overlay opacity-0 text-[#5a5a5a] dark:text-[#5a5a5a]">
                 <div className="tag tag-1">
                     <p>LEARN</p>
                 </div>

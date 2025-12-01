@@ -18,6 +18,7 @@ const config = {
         body: ["var(--font-body)"],
         heading: ["var(--font-heading)"],
         mono: ["var(--font-mono)"],
+        anton: ["var(--font-anton)"],
       },
     },
   },

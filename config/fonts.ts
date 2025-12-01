@@ -1,5 +1,5 @@
 // fonts.ts
-import { Lexend, Montserrat, DM_Sans } from "next/font/google";
+import { Lexend, Montserrat, DM_Sans, Anton } from "next/font/google";
 
 export const bodyFont = Lexend({
   subsets: ["latin"],
@@ -14,4 +14,10 @@ export const headingFont = Montserrat({
 export const monoFont = DM_Sans({
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+export const antonFont = Anton({
+  subsets: ["latin"],
+  variable: "--font-anton",
+  weight: "400",
 });

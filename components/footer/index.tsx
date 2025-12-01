@@ -9,7 +9,7 @@ import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 export default function Footer() {
     return (
         <div className="mt-16">
-            <div className="flex w-full px-4 h-24 bg-black text-white justify-center items-center gap-4">
+            <div className="flex w-full px-4 h-24 bg-black text-white dark:bg-white dark:text-black justify-center items-center gap-4">
                 <h5 className="text-lg">Learn -  Grow - Succeed</h5>
             </div>
             <footer className="flex flex-col max-w-7xl mx-auto w-full px-6">
@@ -27,8 +27,8 @@ export default function Footer() {
                     />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
-                    <div className="flex flex-col gap-1 justify-start items-start text-black">
-                        <h2 className="mb-2 text-black">Contact Us</h2>
+                    <div className="flex flex-col gap-1 justify-start items-start">
+                        <h2 className="mb-2">Contact Us</h2>
                         <p className="opacity-55">Barabaria<br></br>
                             North 24 PGS, WB, Kol-700121<br></br>
                             Email: info@aakcedu.com<br></br>
@@ -50,12 +50,12 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-            <div className="w-full flex items-center justify-between py-3 pb-5 mt-6 max-w-7xl mx-auto px-6">
+            <div className="w-full flex items-center justify-between py-3 pb-5 mt-6 max-w-7xl mx-auto px-6 text-[12px] sm:text-sm">
                 <span>©2025 Al Ameen Knowledge City</span>
                 <Link
                     isExternal
                     color="foreground"
-                    className="text-black/70 hover:text-blue-500"
+                    className="text-black/70 dark:text-white/70 hover:text-blue-500"
                     href="https://hasanur.doclet.app?utm_source=aakc"
                     title="hasanur.12 portfolio"
                 >

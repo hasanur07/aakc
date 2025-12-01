@@ -17,10 +17,10 @@
     height: 100svh;
 }
 
-.intro .preloader, .split-overlay{
+/* .intro .preloader, .split-overlay{
     background: #0a0a0a;
     color: #fff;
-}
+} */
 
 .intro .preloader, .tags-overlay{
     z-index: 2;
@@ -69,7 +69,6 @@
 .intro .tag{
     position: absolute;
     width: max-content;
-    color: #5a5a5a;
     overflow: hidden;
 }
 

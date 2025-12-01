@@ -37,7 +37,11 @@ export default function About() {
             const wrapper = document.createElement("div");
             wrapper.className = "word-wrapper";
             wrapper.style.setProperty("--bg-opacity", "0");
-            wrapper.style.background = "rgba(0,0,0,var(--bg-opacity))";
+            // use Tailwind light/dark bg utilities that reference the CSS var --bg-opacity
+            wrapper.classList.add(
+                "bg-[rgba(0,0,0,var(--bg-opacity))]",
+                "dark:bg-[rgba(255,255,255,var(--bg-opacity))]"
+            );
 
             const span = document.createElement("span");
             span.className = "word-text";
@@ -64,7 +68,7 @@ export default function About() {
         // tuning params
         const each = 0.1; // stagger (seconds per word) — smaller = tighter overlap
         const gapWords = 10; // how many words gap before bg fades out and text fades in
-        const bgAlpha = 0.1; // target background darkness
+        const bgAlpha = "0.1"; // target background darkness
 
         // build timeline controlled by ScrollTrigger
         const tl = gsap.timeline({
@@ -99,7 +103,7 @@ export default function About() {
                 duration: 0.6,
                 stagger: { each, from: 0 },
                 // @ts-ignore
-                "--bg-opacity": 0,
+                "--bg-opacity": "0",
             },
             gapDelay
         );

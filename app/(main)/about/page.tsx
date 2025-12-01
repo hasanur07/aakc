@@ -26,21 +26,25 @@ export default function AboutPage() {
 
   return (
     <div ref={containerRef} className="flex flex-col w-full">
-      <h1
+      <SlideText
         className="font-mono font-bold text-center"
+        text="ABOUT AAKC"
         style={{
           fontSize,
           whiteSpace: "nowrap",
         }}
       >
-        {text}
-      </h1>
+      </SlideText>
       <div className="flex w-full">
         <AnimatedDiv />
       </div>
       <div className="flex flex-col w-full min-h-screen items-start px-6 justify-center">
         <p className="text-[10px]">OUR VISION</p>
-        <h1 className="font-extrabold text-5xl uppercase mt-2">DELIVER SKILL-BASED<br />EDUCATION</h1>
+        <h1 className="font-extrabold text-4xl sm:text-5xl uppercase mt-2 flex flex-wrap">
+          <SlideText text="DELIVER" />
+          <SlideText text="SKILL-BASED" className="sm:ml-4" />
+          <SlideText text="EDUCATION" className="w-full" />
+        </h1>
         <div className="flex w-full h-[50vh] justify-center items-center mt-6">
           <Image
             src="/models/skill-3d-icon.webp"
@@ -57,7 +61,11 @@ export default function AboutPage() {
       </div>
       <div className="flex flex-col w-full min-h-screen items-center text-center px-6 justify-center">
         <p className="text-[10px]">OUR MISSION</p>
-        <h1 className="font-extrabold text-5xl uppercase mt-2 max-w-2xl">WE BUILD FUTURE LEADERS, INNOVATORS, AND ENTREPRENEURS</h1>
+        <h1 className="font-extrabold text-4xl sm:text-5xl uppercase mt-2 max-w-2xl">
+          <SlideText text="WE BUILD FUTURE" />
+          <SlideText text="LEADERS, INNOVATORS," />
+          <SlideText text="AND ENTREPRENEURS" />
+        </h1>
         <p className="text-[14px] mt-6 max-w-sm tracking-widest leading-tight">
           We strive to cultivate the next generation of leaders by providing
           them with the tools and resources they need to succeed in a rapidly
@@ -66,14 +74,20 @@ export default function AboutPage() {
       </div>
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 w-full h-[70vh] items-center px-4 sm:px-22 justify-center">
         <div className="flex flex-col items-start p-4 w-full rounded-md border">
-          <h1 className="text-5xl font-extrabold">JOIN<br />AAKC</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold">
+            <SlideText text="JOIN" />
+            <SlideText text="US TODAY" />
+          </h1>
           <p className="mt-2 tracking-widest">Become a part of our community and start your journey towards a successful career.</p>
-          <Button variant="solid" color="primary" className="mt-4 bg-black rounded-full text-[12px] p-4 h-8">Apply Now</Button>
+          <Button variant="solid" color="primary" className="mt-4 bg-black dark:bg-white dark:text-black rounded-full text-[12px] p-4 h-8">Apply Now</Button>
         </div>
         <div className="flex flex-col items-start p-4 w-full rounded-md border">
-          <h1 className="text-5xl font-extrabold">GET IN<br />TOUCH</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold">
+            <SlideText text="GET" />
+            <SlideText text="IN TOUCH" />
+          </h1>
           <p className="mt-2 tracking-widest">We'd love to hear from you! Reach out with any questions or inquiries.</p>
-          <Button variant="solid" color="primary" className="mt-4 bg-black rounded-full text-[12px] p-4 h-8">Contact Us</Button>
+          <Button variant="solid" color="primary" className="mt-4 bg-black dark:bg-white dark:text-black rounded-full text-[12px] p-4 h-8">Contact Us</Button>
         </div>
       </div>
     </div>
@@ -83,6 +97,7 @@ export default function AboutPage() {
 import React from "react";
 import Image from "next/image";
 import { Button } from "@heroui/button";
+import SlideText from "@/components/text/slideText";
 const AnimatedDiv: React.FC = () => {
   const boxRef = useRef<HTMLDivElement>(null);
 
@@ -134,6 +149,18 @@ const AnimatedDiv: React.FC = () => {
         }
       },
     });
+    ScrollTrigger.create({
+      trigger: ".animated-div",
+      start: "bottom 75%",
+      end: "bottom top",
+      scrub: true,
+      onUpdate: (e) => {
+        const progress = e.progress; // 0 → 1
+        if (boxRef.current) {
+          boxRef.current.style.transform = `TranslateY(-${progress * 10}%)`;
+        }
+      },
+    });
   }, []);
 
   return (
@@ -152,7 +179,7 @@ const AnimatedDiv: React.FC = () => {
         }}
       >
         <img
-          src="https://images.pexels.com/photos/34266109/pexels-photo-34266109.jpeg"
+          src="https://images.pexels.com/photos/34629586/pexels-photo-34629586.jpeg"
           alt="About Hero"
           className="object-cover w-full h-full"
           style={{

@@ -62,7 +62,7 @@ const ReviewRow: React.FC<ReviewRowProps> = ({ reviews, direction, duration }) =
         {[...reviews, ...reviews].map((review, i) => (
           <div
             key={i}
-            className="flex flex-col justify-between w-64 sm:w-72 h-46 rounded-2xl bg-white border border-black/10 p-4 flex-shrink-0"
+            className="flex flex-col justify-between w-64 sm:w-72 h-46 rounded-2xl bg-white border border-black/10 dark:border-white/10 dark:bg-white/5 p-4 flex-shrink-0"
           >
             <p className="opacity-70">{review.text}</p>
             <div className="flex flex-col leading-tight mt-2">
@@ -90,12 +90,13 @@ export default function ThreeRowReviewCarousel() {
           <ReviewRow reviews={reviewsRow2} direction="right" duration={30} />
           <ReviewRow reviews={reviewsRow3} direction="left" duration={10} />
         </div>
-        <div className="flex absolute top-0 left-0 pb-16 w-full h-full rounded-b-full bg-[radial-gradient(circle,rgba(0,0,255,0)_0%,rgba(239,246,255,1)_70%)]"></div>
+        <div className="flex absolute top-0 left-0 pb-16 w-full h-full rounded-b-full bg-[radial-gradient(circle,rgba(0,0,255,0)_0%,rgba(239,246,255,1)_70%)] dark:bg-[radial-gradient(circle,rgba(0,0,255,0)_0%,rgba(0,0,0,1)_70%)]"></div>
       </section>
-      <div className="flex w-full h-10 bg-background -mt-10 z-10 blur-xl"></div>
+      <div className="flex w-full h-10 bg-background dark:bg-black -mt-10 z-10 blur-xl"></div>
       <Button
-      size="sm"
-      radius="full"
+        size="sm"
+        radius="full"
+        className="z-10"
       >
         View Wall Of Love
       </Button>

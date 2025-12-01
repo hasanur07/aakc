@@ -45,24 +45,21 @@ export default function NoticeSection() {
                 scrollTrigger: {
                     trigger: containerRef.current,
                     scrub: true,
-                    start: `${i * 10}% center`,
-                    end: `bottom+=${i * 10}% center`,
+                    start: `${i * 30}% center`,
+                    end: `bottom+=${(i * 30) + 380}% center`,
                 },
             });
 
             tl.to(box, {
                 y: "-50%",
                 ease: "power3.out",
-                duration: 5,
             })
                 .to(box, {
                     y: "-35%",
-                    duration: 4,
                     ease: "power3.out",
                 })
                 .to(box, {
-                    y: "-170%",
-                    duration: 5,
+                    y: "-180%",
                     ease: "power3.out",
                 });
         });
@@ -79,15 +76,15 @@ export default function NoticeSection() {
                         Recently<br />Announced by Us
                     </h1>
 
-                    <div className="flex justify-between border-t border-black/30 pt-4">
+                    <div className="flex justify-between border-t border-black/30 dark:border-white/30 pt-4">
                         <AnimatedButton label="View All Notices" />
-                        <HugeiconsIcon icon={ArrowRight02FreeIcons} size={24} color="black" />
+                        <HugeiconsIcon icon={ArrowRight02FreeIcons} size={24} />
                     </div>
                 </div>
             </section>
 
             {/* PINNED NOTICE GRID */}
-            <section className="sm:h-[280vh] relative sm:-mt-[50vh] mb-10 sm:mb-0">
+            <section className="sm:h-[680vh] relative sm:-mt-[50vh] mb-10 sm:-mb-[130vh]">
                 <div className="sm:pt-[50vh] sticky top-0">
                     <div
                         ref={containerRef}
@@ -135,7 +132,7 @@ function NoticeBox({
     return (
         <div
             ref={innerRef}
-            className="flex flex-col justify-between border border-black/10 bg-black/5 rounded-3xl p-6 gap-4 w-full aspect-[1/1.3]"
+            className="flex flex-col justify-between border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5 rounded-3xl p-6 gap-4 w-full aspect-[1/1.3]"
         >
             <HugeiconsIcon icon={Comment01Icon} size={62} className="text-[#ff6200] mt-4" />
 

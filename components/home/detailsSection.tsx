@@ -77,71 +77,71 @@ export default function DetailsSection() {
     return (
         <div className="flex w-full h-[420vh] px-4 sm:px-8">
             <div ref={contenerRef} className="flex w-full h-[100vh] items-center">
-                <div className="contener-inner flex flex-col-reverse sm:flex-row relative w-full h-[calc(100vh-2.5rem)] sm:h-[calc(100vh-8.5rem)] rounded-4xl border border-black/10 p-4 sm:p-8">
+                <div className="contener-inner flex flex-col-reverse sm:flex-row relative w-full h-[calc(100vh-2.5rem)] sm:h-[calc(100vh-8.5rem)] rounded-4xl border border-black/10 dark:border-white/10 p-4 sm:p-8">
                     {/* Text Section */}
                     <div className="details-container flex relative w-full h-1/2 sm:w-1/2 sm:h-full">
                         <div className="details-content flex flex-col justify-center items-start h-full absolute left-0 top-0 pr-8 pt-4 sm:pt-0">
-                            <div className="flex bg-black rounded-full p-2 text-white gap-1 sm:gap-2 items-center">
+                            <div className="flex bg-black/10 dark:bg-white/10 rounded-full p-2 pr-4 text-black dark:text-white gap-1 sm:gap-2 items-center">
                                 <HugeiconsIcon icon={StarIcon} size={14} />
                                 <span className="text-[10px] sm:text-[12px] uppercase">Features</span>
                             </div>
                             <h2 className="text-lg sm:text-4xl font-bold my-2 sm:mb-6 sm:mt-4">
                                 Discover Our School's Unique Features
                             </h2>
-                            <p className="text-sm sm:text-lg mb-6">
+                            <p className="text-sm sm:text-lg mb-6 opacity-55">
                                 At Al Ameen Knowledge City Missionary School, we pride ourselves on providing a nurturing environment that fosters academic excellence and personal growth.
                             </p>
                             <Button variant="solid" radius="full" color="primary" className="p-2 pl-4 h-12">
                                 <AnimatedButton label="Learn More" />
-                                <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                                <div className="bg-white rounded-full flex justify-center items-center w-12 h-9">
                                     <HugeiconsIcon
                                         icon={ArrowUpRight01Icon}
                                         size={30}
-                                        color="white"
+                                        color="black"
                                     />
                                 </div>
                             </Button>
                         </div>
                         <div className="details-content flex flex-col justify-center h-full absolute left-0 top-0 opacity-0 pr-8 items-start pt-4 sm:pt-0">
-                            <div className="flex bg-black rounded-full p-2 text-white gap-1 sm:gap-2 items-center">
+                            <div className="flex bg-black/10 dark:bg-white/10 rounded-full p-2 pr-4 text-black dark:text-white gap-1 sm:gap-2 items-center">
                                 <HugeiconsIcon icon={StarIcon} size={14} />
                                 <span className="text-[10px] sm:text-[12px] uppercase">Excellence</span>
                             </div>
                             <h2 className="text-lg sm:text-4xl font-bold my-2 sm:mb-6 sm:mt-4">
                                 Explore Our Commitment to Excellence
                             </h2>
-                            <p className="text-sm sm:text-lg mb-4">
+                            <p className="text-sm sm:text-lg mb-4 opacity-55">
                                 We offer a comprehensive curriculum that integrates modern teaching methodologies with traditional values.
                             </p>
                             <Button variant="solid" radius="full" color="primary" className="p-2 pl-4 h-12">
                                 <AnimatedButton label="Learn More" />
-                                <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                                <div className="bg-white rounded-full flex justify-center items-center w-12 h-9">
                                     <HugeiconsIcon
                                         icon={ArrowUpRight01Icon}
                                         size={30}
-                                        color="white"
+                                        color="black"
                                     />
                                 </div>
                             </Button>
                         </div>
                         <div className="details-content flex flex-col justify-center h-full absolute left-0 top-0 opacity-0 pr-8 items-start pt-4 sm:pt-0">
-                            <div className="flex bg-black rounded-full p-2 text-white gap-1 sm:gap-2 items-center">
+                            <div className="flex bg-black/10 dark:bg-white/10 rounded-full p-2 pr-4 text-black dark:text-white gap-1 sm:gap-2 items-center">
                                 <HugeiconsIcon icon={StarIcon} size={14} />
                                 <span className="text-[10px] sm:text-[12px] uppercase">Community</span>
                             </div>
                             <h2 className="text-lg sm:text-4xl font-bold my-2 sm:mb-6 sm:mt-4">
                                 Join a Community of Lifelong Learners
                             </h2>
-                            <p className="text-sm sm:text-lg mb-4">
+                            <p className="text-sm sm:text-lg mb-4 opacity-55">
                                 We are committed to nurturing lifelong learners equipped with skills and values to navigate an ever-changing world.
                             </p>
                             <Button variant="solid" radius="full" color="primary" className="p-2 pl-4 h-12">
                                 <AnimatedButton label="Learn More" />
-                                <div className="bg-black rounded-full flex justify-center items-center w-12 h-9">
+                                <div className="bg-white rounded-full flex justify-center items-center w-12 h-9">
                                     <HugeiconsIcon
                                         icon={ArrowUpRight01Icon}
                                         size={30}
-                                        color="white"
+                                        color="black"
                                     />
                                 </div>
                             </Button>
@@ -153,25 +153,30 @@ export default function DetailsSection() {
                         <div className="image-container flex relative w-full h-full rounded-2xl overflow-hidden">
                             <Image
                                 src="/imgs/pexels-alex-seb-426039033-34686217.jpg"
-                                className="img w-full h-full object-cover absolute inset-0 ease-soft-spring"
+                                className="img w-full h-full object-cover absolute inset-0 ease-soft-spring [mask-image:url('/svg/grid/grid-1.svg')] [mask-position:center] sm:[mask-position:right] [mask-repeat:no-repeat]"
                                 alt="details image"
                                 width={400}
                                 height={600}
                             />
                             <Image
                                 src="/imgs/pexels-esra-afsar-123882149-34644107.jpg"
-                                className="img w-full h-0 object-cover absolute top-full inset-0 ease-soft-spring"
+                                className="img w-full h-0 object-cover absolute top-full inset-0 ease-soft-spring [mask-image:url('/svg/grid/grid-1.svg')] [mask-position:center] sm:[mask-position:right] [mask-repeat:no-repeat]"
                                 alt="details image"
                                 width={400}
                                 height={600}
                             />
-                            <Image
-                                src="/imgs/pexels-anhdanghihi-34313658.jpg"
-                                className="img w-full h-0 object-cover absolute top-full inset-0 ease-soft-spring"
-                                alt="details image"
-                                width={400}
-                                height={600}
-                            />
+                            <div className="flex w-full h-full relative">
+                                <Image
+                                    src="/imgs/pexels-anhdanghihi-34313658.jpg"
+                                    className="img w-full h-0 object-cover absolute top-full inset-0 ease-soft-spring [mask-image:url('/svg/grid/grid-1.svg')] [mask-position:center] sm:[mask-position:right] [mask-repeat:no-repeat]"
+                                    alt="details image"
+                                    width={400}
+                                    height={600}
+                                />
+                                <div className="flex w-20 sm:w-32 absolute left-0 bottom-0 -ml-1 sm:ml-4 bg-orange-600 py-2 sm:py-3 sm:pt-4 px-3 rounded-xl sm:rounded-2xl items-center justify-center text-[8px] sm:text-sm text-white gap-2 border-4 border-background dark:border-black">
+                                    <h5>What 000?</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

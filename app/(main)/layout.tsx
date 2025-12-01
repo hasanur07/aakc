@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { bodyFont, headingFont, monoFont } from "@/config/fonts";
 import IntroPage from "@/components/intro/introPage";
 import Footer from "@/components/footer";
+import { ThemeSwitch } from "@/components/theme-switch";
 
 export const metadata: Metadata = {
   title: {
@@ -28,13 +29,13 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en" className="bg-background text-black">
+    <html suppressHydrationWarning lang="en" className="bg-background text-black dark:text-white dark:bg-black">
       <head />
       <body
         className={clsx(
@@ -45,7 +46,7 @@ export default function RootLayout({
         )}
       >
         <IntroPage />
-        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+        <Providers themeProps={{ attribute: "class" }}>
           <div className="relative flex flex-col">
             <main className="container mx-auto max-w-7xl flex-grow">
               {children}

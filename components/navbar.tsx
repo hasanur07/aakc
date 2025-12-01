@@ -82,7 +82,7 @@ export const Navbar = () => {
   return (
     <HerouiNavbar maxWidth="xl" position="sticky"
       className={`
-    bg-background border-b border-black/10 transition-transform duration-300
+    bg-background dark:bg-black border-b border-black/10 dark:border-white/10 transition-transform duration-300
     ${hidden ? "-translate-y-full" : "translate-y-0"}
   `}>
       {/* Left: Brand */}
@@ -90,13 +90,13 @@ export const Navbar = () => {
         <NavbarBrand>
           <Link href="/" className="flex items-center gap-2">
             <AcmeLogo />
-            <p className="font-bold text-inherit font-heading">AAKC MS</p>
+            <p className="font-bold text-black dark:text-white font-heading">AAKC MS</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
 
       {/* Center: Navigation */}
-      <NavbarContent justify="center" className="hidden sm:flex gap-4 text-sm">
+      <NavbarContent justify="center" className="hidden sm:flex gap-4 text-sm text-black dark:text-white basis-3/5">
         <NavbarItem isActive className="text-sm">
           <Link aria-current="page" href="/">
             <AnimatedButton label="Home" />
@@ -116,7 +116,7 @@ export const Navbar = () => {
               </Button>
             </DropdownTrigger>
           </NavbarItem>
-          <DropdownMenu aria-label="The School" itemClasses={{ base: "gap-4" }} onAction={(key) => { router.push(`/${key}`); console.log(key) }}>
+          <DropdownMenu aria-label="The School" className="text-black dark:text-white" itemClasses={{ base: "gap-4" }} onAction={(key) => { router.push(`/${key}`); console.log(key) }}>
             <DropdownItem key="about" startContent={<HugeiconsIcon icon={InformationCircleFreeIcons} className="h-4 w-4" />}><AnimatedButton label="About Us" /></DropdownItem>
             <DropdownItem key="usage_metrics" startContent={<HugeiconsIcon icon={ArcherIcon} className="h-4 w-4" />}><AnimatedButton label="Achievement" /></DropdownItem>
             <DropdownItem key="production_ready" startContent={<HugeiconsIcon icon={Message01Icon} className="h-4 w-4" />}><AnimatedButton label="Principal Message" /></DropdownItem>
@@ -144,7 +144,7 @@ export const Navbar = () => {
           <Button
             variant="faded"
             radius="full"
-            className="border-black/10 bg-black/5 p-2"
+            className="border-black/10 bg-black/5 dark:bg-white/20 dark:border-white/10 p-2"
             isIconOnly
             onPress={() => { dialog.show(<SearchDialog />) }}
           >
@@ -156,7 +156,7 @@ export const Navbar = () => {
           <Button
             as={Link}
             href="/about"
-            className="font-normal text-white bg-black"
+            className="font-normal text-white bg-black dark:bg-white dark:text-black"
             startContent={<HugeiconsIcon icon={User03Icon} />}
             variant="solid"
             radius="full"
@@ -217,7 +217,7 @@ export const Navbar = () => {
 
 function SearchDialog() {
   return (
-    <Dialog>
+    <Dialog className="dark:bg-black">
       <DialogTitle>Search</DialogTitle>
       <Input variant="bordered" placeholder="Search..." type="search" startContent={<SearchIcon />} />
       <div className="flex h-36 flex-col items-center justify-center gap-2">

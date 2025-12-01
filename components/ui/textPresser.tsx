@@ -218,7 +218,6 @@ const TextPressure: React.FC<TextPressureProps> = ({
           whiteSpace: 'nowrap',
           fontWeight: 100,
           width: '100%',
-          color: stroke ? undefined : textColor
         }}
       >
         {chars.map((char, i) => (
@@ -230,7 +229,6 @@ const TextPressure: React.FC<TextPressureProps> = ({
             data-char={char}
             style={{
               display: 'inline-block',
-              color: stroke ? undefined : textColor
             }}
           >
             {char}
