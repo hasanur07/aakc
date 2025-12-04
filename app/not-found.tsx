@@ -7,7 +7,7 @@ import { antonFont, monoFont } from "@/config/fonts";
 import Image from "next/image";
 import { Button } from "@heroui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01Icon, ArrowLeft03Icon, CircleArrowLeft01Icon, CircleArrowUpRight02Icon } from "@hugeicons/core-free-icons";
+import { CircleArrowLeft01Icon, CircleArrowUpRight02Icon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -18,7 +18,7 @@ export default function NotFound() {
     const setSize = () => {
         if (!containerRef.current) return;
         const { width } = containerRef.current.getBoundingClientRect();
-        const newFontSize = width / (text.length / 1.4);
+        const newFontSize = width / (text.length / (width > 640 ? 1.4 : 1.75));
         setFontSize(newFontSize);
     };
 
@@ -65,9 +65,9 @@ export default function NotFound() {
                     alt="404 Mascot"
                     width={450}
                     height={450}
-                    className="absolute w-[37.5%] -mt-[4%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    className="absolute w-[50%] sm:w-[37.5%] -mt-[4%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 />
-                <div className="flex flex-col absolute bottom-0 py-6 px-4 justify-center items-center text-center">
+                <div className="flex flex-col absolute bottom-0 py-6 px-4 justify-center items-center text-center font-mono">
                     <h1 className="font-mono text-4xl font-semibold">Opps, I think we're lost</h1>
                     <span className="opacity-55 text-sm pt-2">Let's get you back to somewhere familiar...</span>
                     <Button

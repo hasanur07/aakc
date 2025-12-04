@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Al Ameen Knowledge City MS",
-  description: "It",
+  description: "It is an institution that provides quality education and fosters holistic development.",
   navItems: [
     {
       label: "Home",
